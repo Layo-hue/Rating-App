@@ -14,6 +14,7 @@ ratings.forEach((rate) => {
 submit.addEventListener("click", function () {
   if (containerOne.style.display === "none") {
     containerOne.style.display = "block";
+    containerOne.classList.add("container-display");
   } else {
     containerOne.style.display = "none";
   }

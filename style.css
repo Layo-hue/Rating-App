@@ -19,6 +19,7 @@
 body {
   background-color: var(--VeryDarkBlue);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--LightGrey);
@@ -31,10 +32,18 @@ body {
   padding: 35px 20px;
   background-color: var(--DarkBlue);
   margin-bottom: 50px;
+  width: 375px;
   max-width: 375px;
 }
-.container-Hidden {
+.container1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform: scale(0.1);
   display: none;
+}
+.container-display {
+  transform: translate(50%, 50%);
+  transform: scale(1);
 }
 .goldstar {
   display: flex;
@@ -71,12 +80,11 @@ h2 {
   border-radius: 50px;
   background-color: var(--hoverbg);
 }
-.rate-list-item:hover,
 .rate-list-item:focus {
   background-color: var(--MediumGrey);
   color: var(--White);
 }
-.rate-list-item:active {
+.rate-list-item:hover {
   background-color: var(--Orange);
   color: var(--White);
 }
@@ -94,13 +102,7 @@ button:active {
   background-color: var(--White);
   color: var(--Orange);
 }
-.container1 {
-  position: absolute;
-  left: 35.35%;
-  top: 12%;
-  border: 2px solid black;
-  display: none;
-}
+
 .image-container {
   display: flex;
   align-items: center;
@@ -114,6 +116,7 @@ button:active {
   border-radius: 50px;
   margin: 25px auto;
   width: 50%;
+  font-size: 12px;
 }
 .appreciation {
   text-align: center;
