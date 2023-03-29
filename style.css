@@ -22,16 +22,16 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--LightGrey);
-  height: 100vh;
+  min-height: 100vh;
   font-size: 15px;
-  max-width: 375px;
-  margin: 0 auto;
+  /* max-width: 375px; */
 }
 .container {
   border-radius: 15px;
   padding: 35px 20px;
   background-color: var(--DarkBlue);
   margin-bottom: 50px;
+  max-width: 375px;
 }
 .container-Hidden {
   display: none;
@@ -71,7 +71,8 @@ h2 {
   border-radius: 50px;
   background-color: var(--hoverbg);
 }
-.rate-list-item:hover {
+.rate-list-item:hover,
+.rate-list-item:focus {
   background-color: var(--MediumGrey);
   color: var(--White);
 }
@@ -79,12 +80,14 @@ h2 {
   background-color: var(--Orange);
   color: var(--White);
 }
+
 button {
   background-color: var(--Orange);
   color: var(--White);
   width: 100%;
   padding: 10px 0;
   border-radius: 50px;
+  border: none;
 }
 button:hover,
 button:active {
@@ -92,25 +95,11 @@ button:active {
   color: var(--Orange);
 }
 .container1 {
-  border-radius: 15px;
-  padding: 35px 20px;
-  background-color: var(--DarkBlue);
-  margin-bottom: 50px;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
+  left: 35.35%;
+  top: 12%;
+  border: 2px solid black;
   display: none;
- }
-.container-Visible {
-  border-radius: 15px;
-  padding: 35px 20px;
-  background-color: var(--DarkBlue);
-  margin-bottom: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%) scale(1);
-  display: block;
 }
 .image-container {
   display: flex;
@@ -121,14 +110,14 @@ button:active {
   text-align: center;
   color: var(--Orange);
   background-color: var(--hoverbg);
-  padding: 7px 0;
+  padding: 7px 5px;
   border-radius: 50px;
   margin: 25px auto;
   width: 50%;
 }
 .appreciation {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
 }
 .attribution {
   font-size: 11px;

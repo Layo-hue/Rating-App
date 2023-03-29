@@ -1,12 +1,25 @@
-let container = document.getElementById("container");
-let containerOne = document.getElementById("container1");
-let one = document.getElementById("one");
-let two = document.getElementById("two");
-let three = document.getElementById("three");
-let four = document.getElementById("four");
-let five = document.getElementById("five");
+let container = document.querySelector("#container");
+let containerOne = document.querySelector(".container1");
+let ratings = document.querySelectorAll(".rate-list-item");
+let thanks = document.querySelector("#thank-you");
+let submit = document.querySelector("#submit");
+let goBack = document.querySelector("#back-to-rate");
 
-function displayThanks() {
-  containerOne.classList.add("container-Visible");
-  // container.classList.remove("container-Hidden");
-}
+ratings.forEach((rate) => {
+  rate.addEventListener("click", function () {
+    thanks.textContent = `You selected ${rate.textContent} out of 5`;
+  });
+});
+
+submit.addEventListener("click", function () {
+  if (containerOne.style.display === "none") {
+    containerOne.style.display = "block";
+  } else {
+    containerOne.style.display = "none";
+  }
+});
+
+goBack.addEventListener("click", function () {
+  container.style.display = "block";
+  containerOne.style.display = "none";
+});

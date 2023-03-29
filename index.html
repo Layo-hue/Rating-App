@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <form class="container" id="container">
+      <div class="container" id="container">
         <div class="goldstar">
           <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -29,17 +29,15 @@
           is appreciated to help us improve our offering!
         </p>
         <ul class="rate-list">
-          <li class="rate-list-item" id="one">1</li>
-          <li class="rate-list-item" id="two">2</li>
-          <li class="rate-list-item" id"three">3</li>
-          <li class="rate-list-item" id"four">4</li>
-          <li class="rate-list-item" id"five">5</li>
+          <li class="rate-list-item" id="one" tabindex="0">1</li>
+          <li class="rate-list-item" id="two" tabindex="0">2</li>
+          <li class="rate-list-item" id"three" tabindex="0">3</li>
+          <li class="rate-list-item" id"four" tabindex="0">4</li>
+          <li class="rate-list-item" id"five" tabindex="0">5</li>
         </ul>
-        <button type="submit" id="submit" onclick="displayThanks()">SUBMIT</button>
-      </form>
-      <!-- Rating state end -->
-      <!-- Thank you state start -->
-      <div class="container1" id="container1">
+        <button type="submit" id="submit">SUBMIT</button>
+
+        <div class="container container1" id="container">
         <div class="image-container">
           <img src="/images/illustration-thank-you.svg" alt="Thank you" />
         </div>
@@ -49,7 +47,10 @@
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
         </p>
+        <button type="submit" id="back-to-rate">Go Back</button>
       </div>
+    </div>
+
       <footer>
         <div class="attribution">
           Challenge by
